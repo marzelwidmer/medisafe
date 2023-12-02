@@ -1,0 +1,32 @@
+openapi: "3.0.3"
+info:
+  title: "medisafe API"
+  description: "medisafe API"
+  version: "1.0.0"
+servers:
+  - url: "http://localhost:8080"
+paths:
+  /safe:
+    post:
+      summary: "POST safe"
+      operationId: "createSafe"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateSafePayload"
+        required: true
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "string"
+components:
+  schemas:
+    CreateSafePayload:
+      type: "object"
+      properties:
+        name:
+          type: "string"
