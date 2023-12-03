@@ -14,8 +14,7 @@
 
 	<modules>
 		<module>command-medisafe</module>
-<!--		 <module>data-service</module>-->
-		<!-- <module>application-module</module> -->
+		<module>query-medisafe</module>
 	</modules>
 
 	<properties>

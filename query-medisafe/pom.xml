@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ch.keepcalm</groupId>
-	<artifactId>command-medisafe</artifactId>
+	<artifactId>query-medisafe</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>command-medisafe</name>
+	<name>query-medisafe</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

@@ -4,8 +4,8 @@ spring:
       verifier:
         enabled: false
   application:
-    title: "Axon :: Sample Project :: Command"
-    name: "command-medisafe"
+    title: "Axon :: Sample Project :: Query"
+    name: "query-medisafe"
 
 
   rabbitmq:
@@ -24,7 +24,8 @@ axon:
     exchange: myExchange
 
 server:
-  port: 8080
+  port: 8000
+
 ---
 spring:
   config:
