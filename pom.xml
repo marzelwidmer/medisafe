@@ -9,12 +9,13 @@
 
 	<packaging>pom</packaging>
 
-	<name>medisafe root module</name>
 	<description>Axon CQRS / Demo Project for Medisafe Application</description>
+	<name>Axon Framework AMQP</name>
 
 	<modules>
 		<module>command-medisafe</module>
 		<module>query-medisafe</module>
+		<module>amqp-axon-example</module>
 	</modules>
 
 	<properties>

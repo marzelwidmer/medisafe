@@ -1,0 +1,7 @@
+## Create Safe
+POST http://localhost:8080/safe
+Content-Type: application/json
+
+{
+  "name": "string"
+}

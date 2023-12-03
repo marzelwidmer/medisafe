@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: amqpAxonExample
+axon:
+  amqp:
+    exchange: SafeCreatedEvent
+  eventhandling:
+    processors:
+      amqpEvents:
+        source: amqpMessageSource
+        mode: subscribing
+
+  # used for trackingtokens
+  serializer:
+    general: jackson
+    events: jackson
+    messages: jackson
+

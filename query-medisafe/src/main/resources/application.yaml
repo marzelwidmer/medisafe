@@ -14,6 +14,9 @@ spring:
     username: guest
     password: guest
 
+server:
+  port: 8000
+
 # used for trackingtokens
 axon:
   serializer:
@@ -21,10 +24,18 @@ axon:
     events: jackson
     messages: jackson
   amqp:
-    exchange: myExchange
+    exchange: SafeCreatedEvent
+  eventhandling:
+    processors:
+      amqpEvents:
+        source: amqpMessageSource
+        mode: subscribing
 
-server:
-  port: 8000
+
+axoniq:
+  console:
+    credentials: "940a3681-0:8670bbe863b24e5aa5745b7a0bd7aacd"
+
 
 ---
 spring:

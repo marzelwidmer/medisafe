@@ -1,4 +1,4 @@
-package ch.keepcalm.medisafe.query.infrastructure.axon
+package command.infrastructure.axon
 
 import org.axonframework.eventsourcing.EventCountSnapshotTriggerDefinition
 import org.axonframework.eventsourcing.SnapshotTriggerDefinition
