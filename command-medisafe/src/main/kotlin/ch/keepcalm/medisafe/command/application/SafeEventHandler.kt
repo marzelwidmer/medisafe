@@ -22,20 +22,17 @@ import org.axonframework.config.ProcessingGroup
 import org.axonframework.eventhandling.EventHandler
 import org.axonframework.eventhandling.EventMessage
 import org.springframework.stereotype.Component
-
-@Component
-//@ProcessingGroup("amqpEvents")
-@ProcessingGroup(value = "amqpEvents")
-class BankEventHandler {
-
-    /**
-     * Safe created event.
-     */
-    @EventHandler
-    fun <T : EventMessage<Any>> on(event: SafeCreatedEvent) {
-        logger.info {
-            "medisafe created safeId: ${event.safeId}"
-        }
-    }
-
-}
+//
+//@Component
+//@ProcessingGroup(value = "amqpEvents")
+//class SafeEventHandler {
+//
+//    /**
+//     * Safe created event.
+//     */
+//    @EventHandler
+//    fun <T : EventMessage<Any>> on(event: SafeCreatedEvent) {
+//        logger.info { "::--> SafeEventHandler  Handling event: ${event.safeId}"}
+//    }
+//
+//}

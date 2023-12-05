@@ -26,16 +26,11 @@ axon:
 
   amqp:
     exchange: SafeCreatedEvent
-#  eventhandling:
-#    processors:
-#      amqpEvents:
-#        source: amqpMessageSource
-#        mode: subscribing
-#
-#      handlerServicebus:
-#        source: amqpMessageSource
-#        mode: subscribing
-
+  eventhandling:
+    processors:
+      amqpEvents:
+        source: amqpMessageSource
+        mode: subscribing
 
 axoniq:
   console:
