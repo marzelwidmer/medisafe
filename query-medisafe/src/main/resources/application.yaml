@@ -25,11 +25,7 @@ axon:
     messages: jackson
   amqp:
     exchange: SafeCreatedEvent
-  eventhandling:
-    processors:
-      amqpEvents:
-        source: amqpMessageSource
-        mode: subscribing
+
 
 
 axoniq:
