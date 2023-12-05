@@ -26,6 +26,9 @@ axon:
   amqp:
     exchange: SafeCreatedEvent
 
+logging:
+  level:
+    org.axonframework: DEBUG
 
 
 axoniq:

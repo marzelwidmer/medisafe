@@ -1,8 +1,11 @@
 package ch.keepcalm.medisafe.query.infrastructure.axon
 
+import ch.keepcalm.medisafe.query.domain.SafeCreatedEvent
 import ch.keepcalm.medisafe.query.infrastructure.logger
 import com.rabbitmq.client.Channel
 import org.axonframework.config.EventProcessingConfigurer
+import org.axonframework.config.ProcessingGroup
+import org.axonframework.eventhandling.EventHandler
 import org.axonframework.extensions.amqp.eventhandling.AMQPMessageConverter
 import org.axonframework.extensions.amqp.eventhandling.spring.SpringAMQPMessageSource
 import org.springframework.amqp.core.Message
@@ -37,5 +40,15 @@ class AMQPMessageSource(messageConverter: AMQPMessageConverter) : SpringAMQPMess
     override fun onMessage(message: Message?, channel: Channel?) {
         logger.info { "::--> AMQP event: $message received"}
         super.onMessage(message, channel)
+    }
+}
+@ProcessingGroup(value = "amqpEvents")
+class SafeEventHandler {
+
+    @EventHandler
+    fun on(event: SafeCreatedEvent) {
+        // handle the event
+        logger.info { "::--> SafeEventHandler  Handling event: ${this.javaClass}"}
+
     }
 }
