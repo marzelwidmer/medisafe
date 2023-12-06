@@ -6,14 +6,14 @@ import org.axonframework.config.ProcessingGroup
 import org.axonframework.eventhandling.EventHandler
 import org.springframework.stereotype.Component
 
-//@Component
-//@ProcessingGroup(value = "amqpEvents")
-//class SafeEventHandler {
-//
-//    @EventHandler
-//    fun on(event: SafeCreatedEvent) {
-//        // handle the event
-//        logger.info { "::--> SafeEventHandler  Handling event: ${this.javaClass}"}
-//
-//    }
-//}
+@ProcessingGroup(value = "amqpEvents")
+@Component
+class SafeEventHandler {
+
+    @EventHandler
+    fun on(event: SafeCreatedEvent) {
+        // handle the event
+        println(event)
+        logger.info { "::--> SafeEventHandler  Handling event: ${this.javaClass}" }
+    }
+}

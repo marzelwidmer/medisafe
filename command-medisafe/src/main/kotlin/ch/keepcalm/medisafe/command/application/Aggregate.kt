@@ -13,7 +13,7 @@ import org.axonframework.spring.stereotype.Aggregate
 class Aggregate(){
 
     @AggregateIdentifier
-    private lateinit var safeId: SafeId
+    private lateinit var safeId: String
 
     @CommandHandler
     constructor(command: CreateSafeCommand) : this() {
@@ -24,7 +24,7 @@ class Aggregate(){
 
         AggregateLifecycle.apply(
             SafeCreatedEvent(
-                safeId = SafeId(value = aggregateId),
+                safeId = aggregateId,
                 name = command.name
             )
         )

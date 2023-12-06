@@ -5,6 +5,6 @@ import org.axonframework.modelling.command.AggregateIdentifier
 // TODO: 02.12.2023 remove Axon stuff
 data class SafeCreatedEvent(
         @AggregateIdentifier
-        val safeId: SafeId,
-        val name: String
+        val safeId: String = "",
+        val name: String = ""
 )
