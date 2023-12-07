@@ -16,4 +16,6 @@ class SafeEventHandler {
         println(event)
         logger.info { "::--> SafeEventHandler  Handling event: ${this.javaClass}" }
     }
+
+
 }

@@ -56,10 +56,10 @@
 			<groupId>org.axonframework.extensions.kotlin</groupId>
 			<artifactId>axon-kotlin</artifactId>
 		</dependency>
-		<!--<dependency>
+		<dependency>
 			<groupId>org.axonframework.extensions.mongo</groupId>
 			<artifactId>axon-mongo</artifactId>
-		</dependency>-->
+		</dependency>
 		<dependency>
 			<groupId>org.axonframework</groupId>
 			<artifactId>axon-micrometer</artifactId>

@@ -4,6 +4,7 @@ import ch.keepcalm.medisafe.query.domain.SafeCreatedEvent
 import ch.keepcalm.medisafe.query.infrastructure.logger
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.rabbitmq.client.Channel
+import org.axonframework.eventhandling.EventHandler
 import org.axonframework.extensions.amqp.eventhandling.AMQPMessageConverter
 import org.axonframework.extensions.amqp.eventhandling.spring.SpringAMQPMessageSource
 import org.springframework.amqp.core.Message
