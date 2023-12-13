@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: 'postgres:16.1'
+    environment:
+      - 'POSTGRES_DB=kbootdb'
+      - 'POSTGRES_PASSWORD=PNvHnvLzxH'
+      - 'POSTGRES_USER=postgres'
+    ports:
+      - '5432:5432'
